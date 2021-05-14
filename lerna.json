@@ -2,5 +2,27 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "**/*.md",
+        "**/*.test.jsx",
+        "**/*.story.jsx",
+        "**/__snapshots__/**",
+        "yarn.lock"
+      ]
+    },
+    "version": {
+      "ignoreChanges": [
+        "**/*.md",
+        "**/*.test.jsx",
+        "**/*.story.jsx",
+        "**/__snapshots__/**",
+        "yarn.lock"
+      ]
+    }
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }
