@@ -28,9 +28,14 @@
       ```
 3. Lerna publish:
 ```
-- Lerna publish # publishes the packges that have changed since last release
-- Lerna publish from-git # explicitly publish the packages tagged in the current commit
-- Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry 
+Lerna publish # publishes the packges that have changed since last release
+
+Lerna publish from-git # explicitly publish the packages tagged in the current commit
+
+Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry 
 
 ```
+*lerna publish --dist-tag next*: When run with this flag, lerna publish will publish to npm with the given npm dist-tag (defaults to latest).
+
+This option can be used to publish a **prerelease** or **beta** version under a non-latest dist-tag, helping consumers avoid automatically upgrading to prerelease-quality code.
 
