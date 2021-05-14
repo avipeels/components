@@ -39,3 +39,20 @@ Lerna publish from-package # explicitly publish packages where the latest versio
 
 This option can be used to publish a **prerelease** or **beta** version under a non-latest dist-tag, helping consumers avoid automatically upgrading to prerelease-quality code.
 
+4. Lerna version:
+> Bump version of packages changed since the last release
+```
+lerna version 1.0.1 # explicit
+lerna version patch # semver keyword
+lerna version       # select from prompt(s)
+```
+When run, this command does the following:
+
+- Identifies packages that have been updated since the previous tagged release.
+- Prompts for a new version.
+- Modifies package metadata to reflect new release, running appropriate lifecycle scripts in root and per-package.
+- Commits those changes and tags the commit.
+- Pushes to the git remote.
+
+
+
