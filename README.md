@@ -27,7 +27,10 @@
       }
       ```
 3. Lerna publish:
-- > Lerna publish # publishes the packges that have changed since last release
-- > Lerna publish from-git # explicitly publish the packages tagged in the current commit
-- > Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry 
+```
+- Lerna publish # publishes the packges that have changed since last release
+- Lerna publish from-git # explicitly publish the packages tagged in the current commit
+- Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry 
+
+```
 
