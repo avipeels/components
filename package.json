@@ -8,15 +8,34 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "@rajzik/babel-plugin-styled-components": "^2.0.1",
+    "@testing-library/jest-dom": "testing-library/jest-dom",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "classnames": "^2.3.1",
     "cross-env": "^7.0.3",
-    "lerna": "^3.22.1"
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "jest": "^26.6.3",
+    "jest-html-reporter": "^3.4.0",
+    "jest-styled-components": "^7.0.4",
+    "lerna": "^3.22.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "scripts": {
     "build:cjs": "lerna exec --stream -- cross-env BABEL_ENV=build babel src --out-dir dist --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
     "build:esm": "lerna exec --stream -- cross-env BABEL_ENV=build BABEL_MODULES=false babel src --out-dir dist-esm --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
     "build": "yarn run build:cjs & yarn run build:esm",
-    "clean": "lerna exec --stream rimraf dist dist-esm"
+    "clean": "lerna exec --stream rimraf dist dist-esm",
+    "test": "cross-env NODE_ENV=test jest --json  --outputFile=.jest-test-results.json --coverage"
   },
   "workspaces": [
     "packages/*"
