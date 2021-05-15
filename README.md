@@ -80,13 +80,11 @@
       - *testEnvironment: 'node'*: is used to mock the dom
       - *jsdom*: is also an option but the tests become slow. If used, add the following lines at the beginning of the test
   
-            ```
             /**
              * @jest-environment jsdom
              */
-            ```
-      - *moduleNameMapper*: is used to mappping the module for stubbing. They use regular expression to map to module   names that allow to stub out the resources. 
-            ```
+      - *moduleNameMapper*: is used to mappping the module for stubbing. They use regular expression to map to module names that allow to stub out the resources. 
+
             {
                   "moduleNameMapper": {
                   "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
@@ -99,7 +97,6 @@
                         ]
                   }
             }
-            ```
       - *identity-obj-proxy*: used to mock css modules for jest. Then all your className lookups on the styles object will be returned as-is (e.g., styles.foobar === 'foobar'). This is pretty handy for React Snapshot Testing.
             > yarn add --dev identity-obj-proxy
 
