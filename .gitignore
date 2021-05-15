@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Babel dist and dist-esm folders
+packages/*/dist
+packages/*/dist-esm

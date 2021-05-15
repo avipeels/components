@@ -1,14 +1,24 @@
 {
-  "name": "root",
+  "name": "components",
   "private": true,
-  "workspaces":["packages/*"],
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/plugin-transform-regenerator": "^7.13.15",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@rajzik/babel-plugin-styled-components": "^2.0.1",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "lerna": "^3.22.1"
   },
   "scripts": {
     "build:cjs": "lerna exec --stream -- cross-env BABEL_ENV=build babel src --out-dir dist --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
     "build:esm": "lerna exec --stream -- cross-env BABEL_ENV=build BABEL_MODULES=false babel src --out-dir dist-esm --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
-    "build": "yarn run build:cjs & yarn run:esm",
+    "build": "yarn run build:cjs & yarn run build:esm",
     "clean": "lerna exec --stream rimraf dist dist-esm"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
