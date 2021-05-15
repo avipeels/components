@@ -81,11 +81,9 @@
       - *jsdom*: is also an option but the tests become slow. If used, add the following lines at the beginning of the test
   
             ```
-            
             /**
              * @jest-environment jsdom
              */
-
             ```
       - *moduleNameMapper*: is used to mappping the module for stubbing. They use regular expression to map to module   names that allow to stub out the resources. 
             ```
