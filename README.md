@@ -76,4 +76,32 @@
 
 7. **Babel preset env** [link](https://babeljs.io/docs/en/babel-preset-env)
 
+8. **Jest**
+      - *testEnvironment: 'node'*: is used to mock the dom
+      - *jsdom*: is also an option but the tests become slow. If used, add the following lines at the beginning of the test
+            ```
+            /**
+             * @jest-environment jsdom
+             */
+            ```
+      - *moduleNameMapper*: is used to mappping the module for stubbing. They use regular expression to map to module   names that allow to stub out the resources. 
+            ```
+            {
+                  "moduleNameMapper": {
+                  "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
+                  "^[./a-zA-Z0-9$_-]+\\.png$": "<rootDir>/RelativeImageStub.js",
+                  "module_name_(.*)": "<rootDir>/substituted_module_$1.js", // you can substitute captured regex groups using numbered backreferences
+                  "assets/(.*)": [
+                        "<rootDir>/images/$1", // numbered backreferences
+                        "<rootDir>/photos/$1", // numbered backreferences
+                        "<rootDir>/recipes/$1" // numbered backreferences
+                        ]
+                  }
+            }
+            ```
+      - *identity-obj-proxy*: used to mock css modules for jest. Then all your className lookups on the styles object will be returned as-is (e.g., styles.foobar === 'foobar'). This is pretty handy for React Snapshot Testing.
+            > yarn add --dev identity-obj-proxy
+
+
+
 
