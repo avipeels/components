@@ -21,7 +21,7 @@ module.exports = (api) => {
                     pure: true,
                     displayName: true,
                     preprocess: false,
-                    namespace: 'RC'
+                    namespace: 'TRQC'
                 }
             ]
         ]
