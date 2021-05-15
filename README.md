@@ -74,6 +74,6 @@
       $ lerna exec -- protractor conf.js
       ```
 
-7. Babel preset env [link](https://babeljs.io/docs/en/babel-preset-env)
+7. **Babel preset env** [link](https://babeljs.io/docs/en/babel-preset-env)
 
 
