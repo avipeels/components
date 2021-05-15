@@ -65,7 +65,7 @@
       - npm run prepublish in all bootstrapped packages (unless --ignore-prepublish is passed).
       - npm run prepare in all bootstrapped packages.
 
-6. Lerna exec
+6. **Lerna exec**
       > Execute an arbitrary command in each package
 
       ```
