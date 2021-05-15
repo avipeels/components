@@ -41,11 +41,12 @@ This option can be used to publish a **prerelease** or **beta** version under a 
 
 4. **Lerna version**:
       > Bump version of packages changed since the last release
-```
-lerna version 1.0.1 # explicit
-lerna version patch # semver keyword
-lerna version       # select from prompt(s)
-```
+      
+      ```
+      lerna version 1.0.1 # explicit
+      lerna version patch # semver keyword
+      lerna version       # select from prompt(s)
+      ```
 When run, this command does the following:
       - Identifies packages that have been updated since the previous tagged release.
       - Prompts for a new version.
