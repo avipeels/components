@@ -35,9 +35,9 @@
       Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry 
 
       ```
-***lerna publish --dist-tag next***: When run with this flag, lerna publish will publish to npm with the given npm dist-tag (defaults to latest).
+      ***lerna publish --dist-tag next***: When run with this flag, lerna publish will publish to npm with the given npm dist-tag (defaults to latest).
 
-This option can be used to publish a **prerelease** or **beta** version under a non-latest dist-tag, helping consumers avoid automatically upgrading to prerelease-quality code.
+      This option can be used to publish a **prerelease** or **beta** version under a non-latest dist-tag, helping consumers avoid automatically upgrading to prerelease-quality code.
 
 4. **Lerna version**:
       > Bump version of packages changed since the last release
@@ -47,7 +47,7 @@ This option can be used to publish a **prerelease** or **beta** version under a 
       lerna version patch # semver keyword
       lerna version       # select from prompt(s)
       ```
-When run, this command does the following:
+      When run, this command does the following:
       - Identifies packages that have been updated since the previous tagged release.
       - Prompts for a new version.
       - Modifies package metadata to reflect new release, running appropriate lifecycle scripts in root and per-package.
@@ -55,11 +55,11 @@ When run, this command does the following:
       - Pushes to the git remote.
 
 5. **Lerna bootstrap**:
-- Bootstraps all the packagesin lerna repo.
-- Installs all their dependencies.
-- Links cross-dependencies.
+      - Bootstraps all the packagesin lerna repo.
+      - Installs all their dependencies.
+      - Links cross-dependencies.
 
-When run, this command will:
+      When run, this command will:
       - npm install all external dependencies of each package.
       - Symlink together all Lerna packages that are dependencies of each other.
       - npm run prepublish in all bootstrapped packages (unless --ignore-prepublish is passed).
@@ -68,11 +68,11 @@ When run, this command will:
 6. Lerna exec
       > Execute an arbitrary command in each package
 
-```
-$ lerna exec -- <command> [..args] # runs the command in all packages
-$ lerna exec -- rm -rf ./node_modules
-$ lerna exec -- protractor conf.js
-```
+      ```
+      $ lerna exec -- <command> [..args] # runs the command in all packages
+      $ lerna exec -- rm -rf ./node_modules
+      $ lerna exec -- protractor conf.js
+      ```
 
 7. Babel preset env [link](https://babeljs.io/docs/en/babel-preset-env)
 
