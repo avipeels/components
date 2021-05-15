@@ -8,6 +8,10 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "@rajzik/babel-plugin-styled-components": "^2.0.1",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "testing-library/jest-dom",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
@@ -35,9 +39,12 @@
     "build:esm": "lerna exec --stream -- cross-env BABEL_ENV=build BABEL_MODULES=false babel src --out-dir dist-esm --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
     "build": "yarn run build:cjs & yarn run build:esm",
     "clean": "lerna exec --stream rimraf dist dist-esm",
-    "test": "cross-env NODE_ENV=test jest --json  --outputFile=.jest-test-results.json --coverage"
+    "test": "cross-env NODE_ENV=test jest --json  --outputFile=.jest-test-results.json --coverage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {}
 }
