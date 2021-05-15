@@ -41,7 +41,9 @@
     "clean": "lerna exec --stream rimraf dist dist-esm",
     "test": "cross-env NODE_ENV=test jest --json  --outputFile=.jest-test-results.json --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "releaseVersion:alpha": "lerna version --conventional-commits --conventional-prerelease --yes",
+    "release:alpha": "lerna publish from-package --dist-tag prerelease --yes"
   },
   "workspaces": [
     "packages/*"
