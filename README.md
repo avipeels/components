@@ -1,7 +1,7 @@
 # components
 
 1. **Yarn workspaces**:
-      [link](https://classic.yarnpkg.com/en/docs/workspaces/) 
+      [link](https://classic.yarnpkg.com/en/docs/workspaces/)
       - Yarn workspaces provide a way to organise thge packages in such a way that we only need to run `yarn install` once to install all of them in a single pass.
       - This is an alternative to `yarn link`. All the dependencies can be linked together using this. And workspaces can depend on one another with Continuously  being up to date.
       - Yarn  will use single lock file rather than per project.
@@ -32,7 +32,7 @@
 
       Lerna publish from-git # explicitly publish the packages tagged in the current commit
 
-      Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry 
+      Lerna publish from-package # explicitly publish packages where the latest version is not present in the registry
 
       ```
       ***lerna publish --dist-tag next***: When run with this flag, lerna publish will publish to npm with the given npm dist-tag (defaults to latest).
@@ -41,7 +41,7 @@
 
 4. **Lerna version**:
       > Bump version of packages changed since the last release
-      
+
       ```
       lerna version 1.0.1 # explicit
       lerna version patch # semver keyword
@@ -79,11 +79,11 @@
 8. **Jest**
       - *testEnvironment: 'node'*: is used to mock the dom
       - *jsdom*: is also an option but the tests become slow. If used, add the following lines at the beginning of the test
-  
+
             /**
              * @jest-environment jsdom
              */
-      - *moduleNameMapper*: is used to mappping the module for stubbing. They use regular expression to map to module names that allow to stub out the resources. 
+      - *moduleNameMapper*: is used to mappping the module for stubbing. They use regular expression to map to module names that allow to stub out the resources.
 
             {
                   "moduleNameMapper": {
@@ -100,6 +100,13 @@
       - *identity-obj-proxy*: used to mock css modules for jest. Then all your className lookups on the styles object will be returned as-is (e.g., styles.foobar === 'foobar'). This is pretty handy for React Snapshot Testing.
             > yarn add --dev identity-obj-proxy
 
-
-
-
+9. **ESLint**:
+      - npm install eslint -g
+      - "babel-eslint": "^10.0.3"
+      - "eslint-config-prettier": "^6.15.0"
+      - "eslint-plugin-import": "^2.20.1"
+      - "eslint-plugin-jest": "^23.13.2"
+      - "eslint-plugin-jsx-a11y": "^6.2.3"
+      - "eslint-plugin-prettier": "^3.1.4"
+      - "eslint-plugin-react": "^7.18.3"
+      - "eslint-plugin-react-hooks": "^2.0.1"

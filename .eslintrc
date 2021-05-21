@@ -1,0 +1,30 @@
+{
+      "extends": [
+            "airbnb",
+            "plugin:jest/all",
+            "prettier"
+      ],
+      "plugins": [
+            "jest",
+            "prettier"
+      ],
+      "rules": {
+            "jest/no-hooks": "off",
+            "jest/no-mocks-import": "off",
+            "jest/prefer-called-with": "off",
+            "prettier/prettier": "error",
+            "react/jsx-curly-spacing": [
+                  "error",
+                  "never",
+                  {
+                        "allowMultiline": true
+                  }
+            ]
+      },
+      "env": {
+            "jest": true,
+            "browser": true,
+            "node": true
+      },
+      "parser": "babel-eslint"
+}
