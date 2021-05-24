@@ -3,7 +3,8 @@ pipeline {
      stages {
         stage('Install') {
             steps {
-                echo 'Installing'
+                echo 'Installing...'
+                sh 'nvm use 12.16.1'
                 sh 'yarn'
             }
         }
