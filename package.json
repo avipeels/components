@@ -57,7 +57,7 @@
     "lintit": "eslint"
   },
   "engines": {
-    "node": ">=8.x.x"
+    "node": ">=10.x.x"
   },
   "workspaces": [
     "packages/*"
