@@ -4,14 +4,13 @@ pipeline {
         stage('Install') {
             steps {
                 echo 'Installing...'
-                sh 'nvm use 12.16.1'
-                sh 'yarn'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'yarn test'
+                sh 'npm test'
             }
         }
         stage('Deploy') {
