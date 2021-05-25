@@ -1,13 +1,12 @@
 pipeline {
     agent {
         docker {
-            image 'node:12.6'
+            image 'node:13.6'
         }
     }
     stages {
         stage('Build') {
             steps {
-                sh "npm install -g yarn"
                 sh 'yarn'
             }
         }
