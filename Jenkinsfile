@@ -4,6 +4,7 @@ pipeline {
             image 'node:13.6'
         }
     }
+    tools {nodejs "myNode"}
     stages {
         stage('Build') {
             steps {
