@@ -11,7 +11,6 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'yarn'
-            // sh 'docker version'
             }
         }
         stage('Test') {
@@ -21,7 +20,7 @@ pipeline {
         }
         stage('Echoes') {
             steps {
-                sh 'docker version'
+                sh 'docker -v'
             }
         }
     }
