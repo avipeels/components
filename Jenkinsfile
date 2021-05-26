@@ -1,10 +1,7 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:12.6'
-        }
-    }
-    stages {
+  agent any
+  tools {nodejs "myNode"}
+  stages {
         stage('Build') {
             steps {
                 sh 'yarn'
