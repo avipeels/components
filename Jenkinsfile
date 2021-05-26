@@ -9,14 +9,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker version'
                 sh 'node --version'
                 sh 'yarn'
+            // sh 'docker version'
             }
         }
         stage('Test') {
             steps {
                 sh 'yarn test'
+            }
+        }
+        stage('Echoes') {
+            steps {
+                sh 'docker version'
             }
         }
     }
