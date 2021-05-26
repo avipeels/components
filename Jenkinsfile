@@ -4,7 +4,7 @@ pipeline {
             image 'node:13.6'
         }
     }
-    tools {nodejs "myNode"}
+    tools {nodejs "myNode", docker 'myDocker'}
     stages {
         stage('Build') {
             steps {
