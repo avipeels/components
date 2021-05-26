@@ -1,23 +1,22 @@
 pipeline {
-  agent any
+    agent any
+    environment {
+        // dockerHome = tool 'myDocker'
+        nodeHome = tool 'myNode'
+        PATH = "$nodeHome/bin:$PATH"
+    }
 
-  environment {
-      dockerHome = tool 'myDocker'
-      nodeHome = tool 'myNode'
-      PATH = "$dockerHome/bin:$nodeHome/bin:$PATH"
-  }
-
-  stages {
+    stages {
         stage('Build') {
             steps {
-                sh 'docker version'
+                // sh 'docker version'
                 sh 'node --version'
                 sh 'yarn'
             }
         }
-        stage('Test') { 
+        stage('Test') {
             steps {
-                sh 'yarn test' 
+                sh 'yarn test'
             }
         }
     }
