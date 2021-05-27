@@ -5,15 +5,13 @@ FROM node:12.16.0-alpine
 WORKDIR /usr/src/components
 
 # install app dependencies
-COPY package.json /usr/src/components
+COPY package*.json ./
 
+RUN yarn
 
 # add app
 COPY . .
 
-RUN yarn
+EXPOSE 8080
 
-RUN yarn build
-
-
-EXPOSE 5000
+CMD [ "node", "server.js" ]

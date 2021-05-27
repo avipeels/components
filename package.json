@@ -44,7 +44,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "build:cjs": "lerna exec --stream -- cross-env BABEL_ENV=build babel src --out-dir dist --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
     "build:esm": "lerna exec --stream -- cross-env BABEL_ENV=build BABEL_MODULES=false babel src --out-dir dist-esm --config-file ../../babel.config.js --ignore \"**/*.story.jsx\",\"**/*.test.jsx\" --delete-dir-on-start --no-comments",
     "build": "yarn run build:cjs & yarn run build:esm",
@@ -62,5 +64,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "express": "4.16.1"
+  }
 }
