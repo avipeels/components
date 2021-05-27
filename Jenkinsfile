@@ -7,12 +7,12 @@ pipeline {
     }
 
     stages {
-        stage('Install') {
-            steps {
-                sh 'node --version'
-                sh 'yarn'
-            }
-        }
+        // stage('Nodee ') {
+        //     steps {
+        //         sh 'node --version'
+        //         sh 'yarn'
+        //     }
+        // }
         stage('Test') {
             steps {
                 sh 'yarn test'
