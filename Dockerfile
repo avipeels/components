@@ -10,7 +10,7 @@ COPY package.json /usr/src/components
 RUN yarn
 
 # add app
-COPY . /usr/src/app
+COPY . /usr/src/components/
 RUN yarn build
 
 
