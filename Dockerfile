@@ -5,7 +5,9 @@ FROM node:12.16.0-alpine
 WORKDIR /usr/src/components
 
 # install app dependencies
-COPY package*.json ./
+COPY package.json ./
+
+COPY yarn.lock ./
 
 RUN yarn install
 
