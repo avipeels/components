@@ -7,7 +7,6 @@ WORKDIR /usr/src/components
 # install app dependencies
 COPY package.json /usr/src/components
 
-RUN yarn
 
 # add app
 COPY . /usr/src/components/
