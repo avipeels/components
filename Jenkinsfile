@@ -3,12 +3,14 @@ pipeline {
     environment {
         dockerHome = tool 'myDocker'
         nodeHome = tool 'myNode'
-        PATH = "$dockerHome/bin:$nodeHome/bin:$PATH"
+        gitHome = tool 'myGit'
+        PATH = "$dockerHome/bin:$nodeHome/bin:$gitHome/bin$PATH"
     }
 
     stages {
         stage('Install') {
             steps {
+                echo "path - $PATH"
                 sh 'node --version'
                 sh 'yarn'
             }
