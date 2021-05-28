@@ -23,3 +23,7 @@
 
     sudo mv nexus-3.22.0-02 nexus
 
+**Create user nexus**
+
+    sudo adduser nexus
+
