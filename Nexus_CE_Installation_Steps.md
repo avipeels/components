@@ -59,3 +59,11 @@
         Restart=on-abort
         [Install]
         WantedBy=multi-user.target
+    ```
+
+**Start nexus service**
+
+    sudo systemctl enable nexus
+    sudo systemctl start nexus
+    sudo systemctl status nexus
+
