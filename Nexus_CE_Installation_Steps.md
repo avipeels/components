@@ -44,22 +44,21 @@
 
     sudo nano /opt/nexus/bin/nexus.service
 
-    ```
-        [unit]
-        Description=nexus service
-        After=network.target
-        [service]
-        Type=forking
-        LimitNOFILE=65536
-        User=nexus
-        Group=nexus
-        ExecStart=/opt/nexus/bin/nexus start
-        ExecStop=/opt/nexus/bin/nexus stop
-        User=nexus
-        Restart=on-abort
-        [Install]
-        WantedBy=multi-user.target
-    ```
+    [unit]
+    Description=nexus service
+    After=network.target
+    [service]
+    Type=forking
+    LimitNOFILE=65536
+    User=nexus
+    Group=nexus
+    ExecStart=/opt/nexus/bin/nexus start
+    ExecStop=/opt/nexus/bin/nexus stop
+    User=nexus
+    Restart=on-abort
+    [Install]
+    WantedBy=multi-user.target
+    
 
 **Start nexus service**
 
