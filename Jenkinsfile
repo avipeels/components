@@ -48,9 +48,9 @@ pipeline {
         stage('Push to nexus') {
             steps {
                 script {
-                    TAR_FILENAME = "${PROJECT_NAME}-${env.BRANCH_NAME}-B${env.BUILD_NUMBER}.tar.gz"
+                    TAR_FILENAME = "${PROJECT_NAME}-B${env.BUILD_NUMBER}.tar.gz"
                     sh "tar -zcf ${TAR_FILENAME} * --exclude ${TAR_FILENAME} --exclude .git --exclude tests --exclude coverage"
-                    sh "mvn deploy:deploy-file -DartifactId=${PROJECT_NAME} -Dversion=1 -DgeneratePom=false -Dpackaging=tar.gz -DrepositoryId=turquoise-components -Durl=http://146.148.79.21:8081/repository/turquoise-components -Dfile=${TAR_FILENAME} -B"
+                    sh "mvn deploy:deploy-file -DgroudId=turquoise -DartifactId=${PROJECT_NAME} -Dversion=1 -DgeneratePom=false -Dpackaging=tar.gz -DrepositoryId=turquoise-components -Durl=http://146.148.79.21:8081/repository/turquoise-components -Dfile=${TAR_FILENAME} -B"
 
                 }
             }
