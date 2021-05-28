@@ -42,7 +42,7 @@
 
 **Configure nexus to run as service**
 
-    sudo nano /opt/nexus/bin/nexus.service
+    sudo nano /etc/systemd/system/nexus.service
 
     [unit]
     Description=nexus service
