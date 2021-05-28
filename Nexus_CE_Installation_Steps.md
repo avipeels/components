@@ -44,10 +44,10 @@
 
     sudo nano /etc/systemd/system/nexus.service
 
-    [unit]
+    [Unit]
     Description=nexus service
     After=network.target
-    [service]
+    [Service]
     Type=forking
     LimitNOFILE=65536
     User=nexus
