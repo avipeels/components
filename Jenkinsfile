@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'docker'
-    }
+    agent any
     environment {
         PROJECT_NAME = 'proven-wavelet-314512'
         DOCKER_HOME = tool 'myDocker'
@@ -12,14 +10,14 @@ pipeline {
     }
 
     stages {
-        stage('Build Application') {
-            agent {
-                docker  {
-                    reuseNode: true
-                    image: 'gcr.io/proven-wavelet-314512/node'
-                }
-            }
-        }
+        // stage('Build Application') {
+        //     agent {
+        //         docker  {
+        //             reuseNode: true
+        //             image: 'gcr.io/proven-wavelet-314512/node'
+        //         }
+        //     }
+        // }
         stage('Test') {
             steps {
                 sh 'yarn test'
