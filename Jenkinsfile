@@ -51,7 +51,7 @@ pipeline {
                     TAR_FILENAME = "${PROJECT_NAME}-B${env.BUILD_NUMBER}.tar.gz"
                     sh "tar -zcf ${TAR_FILENAME} * --exclude ${TAR_FILENAME} --exclude .git --exclude tests --exclude coverage"
                     sh "npm publish"
-                    sh "mvn deploy:deploy-file -DgroupId=components -DartifactId=${PROJECT_NAME} -Dversion=1 -DgeneratePom=false -Dpackaging=tar.gz -DrepositoryId=turquoise-components -Durl=http://146.148.79.21:8081/repository/turquoise-components/ -Dfile=${TAR_FILENAME} -B -Drepo.login="admin" -Drepo.pwd="InTeL(38*""
+                    sh "mvn deploy:deploy-file -DgroupId=components -DartifactId=${PROJECT_NAME} -Dversion=1 -DgeneratePom=false -Dpackaging=tar.gz -DrepositoryId=turquoise-components -Durl=http://146.148.79.21:8081/repository/turquoise-components/ -Dfile=${TAR_FILENAME} -B"
 
                 }
             }
