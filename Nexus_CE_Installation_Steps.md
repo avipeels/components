@@ -36,3 +36,6 @@
 
     sudo nano /opt/nexus/bin/nexus.rc
 
+**Modify memory settings**
+
+    sudo nano /opt/nexus/bin/nexus.vmoptions
