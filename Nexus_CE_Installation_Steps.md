@@ -17,3 +17,9 @@
 
     sudo wget http://download.sonatype.com/nexus/3/nexus-3.22.0-02-unix.tar.gz
 
+**Extract Nexus**
+
+    sudo tar -xvf nexus-3.22.0-02-unix.tar.gz
+
+    sudo mv nexus-3.22.0-02 nexus
+
