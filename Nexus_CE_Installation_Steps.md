@@ -27,3 +27,8 @@
 
     sudo adduser nexus
 
+**Give permission to nexus user**
+
+    sudo chown -r nexus:nexus /opt/nexus
+    sudo chown -r nexus:nexus /opt/sonatype-work
+
