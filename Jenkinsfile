@@ -1,19 +1,25 @@
 pipeline {
-    agent any
+    agent {
+        label 'docker'
+    }
     environment {
-        dockerHome = tool 'myDocker'
-        nodeHome = tool 'myNode'
-        gitHome = tool 'myGit'
-        PATH = "$dockerHome/bin:$nodeHome/bin:$gitHome/bin$PATH"
+        PROJECT_NAME = 'proven-wavelet-314512'
+        DOCKER_HOME = tool 'myDocker'
+        NODE_HOME = tool 'myNode'
+        GIT_HOME = tool 'myGit'
+        PATH = "$DOCKER_HOME/bin:$NODE_HOME/bin:$GIT_HOME/bin$PATH"
+        GCR_REPO = "gcr.io/${PROJECT_NAME}"
     }
 
     stages {
-        // stage('Nodee ') {
-        //     steps {
-        //         sh 'node --version'
-        //         sh 'yarn'
-        //     }
-        // }
+        stage('Build Application') {
+            agent {
+                docker  {
+                    reuseNode: true
+                    image: 'gcr.io/proven-wavelet-314512/node'
+                }
+            }
+        }
         stage('Test') {
             steps {
                 sh 'yarn test'
@@ -38,6 +44,16 @@ pipeline {
                         dockerImage.push()
                         dockerImage.push('latest')
                     }
+                }
+            }
+        }
+        stage('Push to nexus') {
+            steps {
+                script {
+                    TAR_FILENAME = "${PROJECT_NAME}-${env.BRANCH_NAME}-B${env.BUILD_NUMBER}.tar.gz"
+                    sh "tar -zcf ${TAR_FILENAME} * --exclude ${TAR_FILENAME} --exclude .git --exclude tests --exclude coverage"
+                    sh "mvn deploy:deploy-file -DartifactId=${PROJECT_NAME} -Dversion=1 -DgeneratePom=false -Dpackaging=tar.gz -DrepositoryId=turquoise-components -Durl=http://146.148.79.21:8081/repository/turquoise-components -Dfile=${TAR_FILENAME} -B"
+
                 }
             }
         }
