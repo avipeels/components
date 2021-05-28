@@ -32,3 +32,7 @@
     sudo chown -R nexus:nexus /opt/nexus
     sudo chown -R nexus:nexus /opt/sonatype-work
 
+**Modify nexus.rc file**
+
+    sudo nano /opt/nexus/bin/nexus.rc
+
