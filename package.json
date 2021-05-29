@@ -4,6 +4,10 @@
   "publishConfig": {
     "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avipeels/components"
+  },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.2",
