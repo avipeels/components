@@ -9,6 +9,13 @@
   "scripts": {
     "test": "jest --config=./jest.config.js"
   },
+  "publishConfig": {
+    "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avipeels/components"
+  },
   "devDependencies": {
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
