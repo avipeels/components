@@ -1,5 +1,5 @@
 {
-  "name": "label",
+  "name": "@mycomp/label",
   "version": "0.0.2-alpha.1",
   "description": "It will generate a button .",
   "main": "dist/index.js",

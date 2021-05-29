@@ -33,7 +33,9 @@ pipeline {
                 echo 'publishing new version'
                 sh 'git pull'
                 sh 'yarn run releaseVersion:alpha'
-                sh 'yarn run release:alphaß'
+                sh 'yarn run release:alpha'
+                sh 'git pull'
+                sh 'git push origin HEAD:main --follow-tags'
             }
         }
         // stage('Docker build image') {
