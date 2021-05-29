@@ -35,6 +35,7 @@ pipeline {
                 sh 'git checkout -f main'
                 sh 'git pull'
                 sh 'yarn run releaseVersion:alpha'
+                sh 'npm whoami'
                 sh 'yarn run release:alpha'
                 sh 'git pull'
                 sh 'git push origin HEAD:main --follow-tags'
