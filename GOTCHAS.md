@@ -39,3 +39,12 @@
             Lines        : Unknown% ( 0/0 )
       ```
       Then check the path of coverageCollectables like: `'packages/*/src/**/*.{js,jsx}'`
+
+4. Script to clear jenkins old build
+      ```
+      def jobName = "copy_folder"
+      def job = Jenkins.instance.getItem(jobName)
+      job.getBuilds().each { it.delete() }
+      job.nextBuildNumber = 1
+      job.save()
+      ```
