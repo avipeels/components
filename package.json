@@ -1,6 +1,6 @@
 {
-  "name": "components",
-  "version": "2.0.0",
+  "name": "@mycomp/components",
+  "version": "1.0.0",
   "publishConfig": {
     "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
   },
