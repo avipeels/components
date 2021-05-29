@@ -1,6 +1,6 @@
 {
   "name": "@mycomp/label",
-  "version": "0.0.2-alpha.5",
+  "version": "0.0.2-alpha.6",
   "description": "It will generate a button .",
   "main": "dist/index.js",
   "module": "dist-esm/index.js",
