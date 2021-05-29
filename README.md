@@ -110,3 +110,7 @@
       - "eslint-plugin-prettier": "^3.1.4"
       - "eslint-plugin-react": "^7.18.3"
       - "eslint-plugin-react-hooks": "^2.0.1"
+
+10. **npmrc**
+
+      > echo -n 'admin:admin123' | openssl base64
