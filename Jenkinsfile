@@ -31,6 +31,7 @@ pipeline {
         stage('Update package version') {
             steps {
                 echo 'publishing new version'
+                sh 'git checkout -f main'
                 sh 'git pull'
                 sh 'yarn run releaseVersion:alpha'
                 sh 'yarn run release:alpha'
