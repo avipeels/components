@@ -7,6 +7,7 @@ pipeline {
         GIT_HOME = tool 'myGit'
         PATH = "$DOCKER_HOME/bin:$NODE_HOME/bin:$GIT_HOME/bin$PATH"
         GCR_REPO = "gcr.io/${PROJECT_NAME}"
+        NPM_TOKEN = credentials('Nexus')
     }
 
     stages {
