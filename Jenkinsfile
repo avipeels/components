@@ -36,6 +36,10 @@ pipeline {
                 sh 'git checkout -f main'
                 sh 'git pull'
                 sh 'npm run releaseVersion:alpha'
+            }
+        }
+        stage('Update main branch') {
+            steps {
                 sh 'git pull'
                 sh 'git push origin HEAD:main --follow-tags'
             }
