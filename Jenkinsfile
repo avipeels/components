@@ -28,6 +28,14 @@ pipeline {
                 sh 'yarn build'
             }
         }
+        stage('Update package version') {
+            steps {
+                echo 'publishing new version'
+                sh 'git pull'
+                sh 'yarn run releaseVersion:alpha'
+                sh 'yarn run release:alphaß'
+            }
+        }
         // stage('Docker build image') {
         //     steps {
         //         script {
@@ -45,14 +53,12 @@ pipeline {
         //         }
         //     }
         // }
-        stage('Push to nexus') {
+        stage('Publish to nexus') {
             steps {
                 script {
                     TAR_FILENAME = "${PROJECT_NAME}-B${env.BUILD_NUMBER}.tar.gz"
                     sh "tar -zcf ${TAR_FILENAME} * --exclude ${TAR_FILENAME} --exclude .git --exclude tests --exclude coverage"
                     sh "npm publish"
-                    // sh "mvn deploy:deploy-file -DgroupId=components -DartifactId=${PROJECT_NAME} -Dversion=1 -DgeneratePom=false -Dpackaging=tar.gz -DrepositoryId=turquoise-components -Durl=http://146.148.79.21:8081/repository/turquoise-components/ -Dfile=${TAR_FILENAME} -B"
-
                 }
             }
         }
