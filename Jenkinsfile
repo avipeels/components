@@ -35,9 +35,7 @@ pipeline {
                 echo 'publishing new version'
                 sh 'git checkout -f main'
                 sh 'git pull'
-                sh 'yarn run releaseVersion:alpha'
-                sh 'npm whoami'
-                sh 'yarn run release:alpha'
+                sh 'npm run releaseVersion:alpha'
                 sh 'git pull'
                 sh 'git push origin HEAD:main --follow-tags'
             }
@@ -62,9 +60,7 @@ pipeline {
         stage('Publish to nexus') {
             steps {
                 script {
-                    TAR_FILENAME = "${PROJECT_NAME}-B${env.BUILD_NUMBER}.tar.gz"
-                    sh "tar -zcf ${TAR_FILENAME} * --exclude ${TAR_FILENAME} --exclude .git --exclude tests --exclude coverage"
-                    sh "npm publish"
+                    sh 'npm run release:alpha'
                 }
             }
         }

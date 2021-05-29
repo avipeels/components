@@ -48,3 +48,8 @@
       job.nextBuildNumber = 1
       job.save()
       ```
+5. lerna info publish Publishing packages to npm...
+      lerna info Verifying npm credentials
+      lerna http fetch GET 401 https://registry.npmjs.org/-/npm/v1/user 1800ms
+
+      > use npm instead of yarn for lerna commands

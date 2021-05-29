@@ -1,6 +1,7 @@
 {
   "name": "@mycomp/components",
   "version": "1.0.0",
+  "private": "true",
   "publishConfig": {
     "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
   },
@@ -50,6 +51,9 @@
     "prop-types": "^15.6.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "express": "4.16.1"
   },
   "main": "server.js",
   "scripts": {
