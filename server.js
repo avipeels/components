@@ -9,7 +9,7 @@ const PORT = 8080;
 const app = express();
 app.use(morgan('dev'));
 
-const serve = serveStatic(path.join(__dirname, 'components'), { index: ['index.html'] });
+const serve = serveStatic(path.join(__dirname, 'componentz'), { index: ['index.html'] });
 app.use('/', serve);
 
 app.listen(PORT);
