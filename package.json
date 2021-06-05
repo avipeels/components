@@ -70,7 +70,7 @@
     "lintit": "eslint"
   },
   "engines": {
-    "node": ">=10.x"
+    "node": ">=10.0"
   },
   "workspaces": [
     "packages/*"
