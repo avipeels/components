@@ -1,16 +1,16 @@
-'use strict';
-
 const express = require('express');
-
+const serveStatic = require('serve-static');
+const path = require('path');
+const morgan = require('morgan');
 // Constants
 const PORT = 8080;
-const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "storybook-static", "index.html"));
-});
+app.use(morgan('dev'));
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+const serve = serveStatic(path.join(__dirname, 'components'), { index: ['index.html'] });
+app.use('/', serve);
+
+app.listen(PORT);
+console.log(`Running`);
