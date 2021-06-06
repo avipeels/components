@@ -1,0 +1,19 @@
+{
+  "name": "@mycomp/turquoise-design-token",
+  "version": "0.0.0",
+  "description": "Project design token",
+  "main": "dist/index.js",
+  "module": "dist-esm/index.js",
+  "author": "Framework Developers",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest --config=./jest.config.js"
+  },
+  "publishConfig": {
+    "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:avipeels/components.git"
+  }
+}
