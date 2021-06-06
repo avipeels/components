@@ -53,6 +53,7 @@
       lerna http fetch GET 401 https://registry.npmjs.org/-/npm/v1/user 1800ms
 
       > use npm instead of yarn for lerna commands
+      
 
 6. BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.This is no longer the case. Verify if you need this module and configure a polyfill for it.
       In webpack config file
@@ -65,3 +66,5 @@
 8. Critical dependency: the request of a dependency is an expression
       In webpack config file
       > externals: { express: 'express'},
+
+9. lerna ERR! fatal: could not read Username for 'https://github.com': No such device or address while running `npm run releaseVersion:alpha`
