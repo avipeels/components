@@ -53,3 +53,15 @@
       lerna http fetch GET 401 https://registry.npmjs.org/-/npm/v1/user 1800ms
 
       > use npm instead of yarn for lerna commands
+
+6. BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.This is no longer the case. Verify if you need this module and configure a polyfill for it.
+      In webpack config file
+      > const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+
+7. Module not found: Error: Can't resolve 'fs' in '/Users/apeeluk/Code_Bases/Learnings/Components/node_modules/send'
+      In webpack config file
+      > target: 'node',
+
+8. Critical dependency: the request of a dependency is an expression
+      In webpack config file
+      > externals: { express: 'express'},
