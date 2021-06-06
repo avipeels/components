@@ -112,5 +112,7 @@
       - "eslint-plugin-react-hooks": "^2.0.1"
 
 10. **npmrc**
-
       > echo -n 'admin:admin123' | openssl base64
+
+11. **Jenkins restart**
+      > $ sudo /etc/init.d/jenkins restart
