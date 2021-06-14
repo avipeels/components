@@ -34,13 +34,14 @@ pipeline {
             steps {
                 echo 'publishing new version'
                 sh 'git checkout -f main'
+                echo 'git remote -v'
                 sh 'git pull'
                 sh 'npm run releaseVersion:alpha'
             }
         }
         stage('Update main branch') {
             steps {
-                sh 'git pull'
+                sh 'git pull origin main'
                 sh 'git push origin HEAD:main --follow-tags'
             }
         }
