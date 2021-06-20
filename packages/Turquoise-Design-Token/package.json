@@ -1,6 +1,6 @@
 {
   "name": "@mycomp/turquoise-design-token",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "Project design token",
   "main": "dist/index.js",
   "module": "dist-esm/index.js",
