@@ -73,7 +73,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "releaseVersion:alpha": "lerna version --conventional-commits --conventional-prerelease --yes",
-    "release:alpha": "lerna publish from-package --dist-tag prerelease --yes",
+    "release:alpha": "lerna publish from-package --dist-tag prerelease --yes --no-verify-access",
     "lintit": "eslint",
     "build-webpack": "yarn run clean-comp && build-storybook -c .storybook -o componentz",
     "clean-comp": "rimraf componentz"
