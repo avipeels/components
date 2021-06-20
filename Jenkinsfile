@@ -22,6 +22,7 @@ pipeline {
         // }
         stage('Test') {
             steps {
+                sh 'yarn'
                 sh 'yarn test'
             }
         }
