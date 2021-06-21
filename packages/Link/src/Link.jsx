@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Link = ({ name, href }) => {
+const Link = ({ name, href, target }) => {
     return (
-        <a href={href}>{name}</a>
+        <a href={href} target={target}>{name}</a>
     );
 }
 

@@ -1,0 +1,32 @@
+{
+  "name": "@mycomp/button",
+  "version": "0.0.0",
+  "description": "It will generate a button.",
+  "main": "dist/index.js",
+  "module": "dist-esm/index.js",
+  "author": "Framework Developers",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest --config=./jest.config.js"
+  },
+  "publishConfig": {
+    "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:avipeels/components.git"
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest-styled-components": "^6.3.3",
+    "react-test-renderer": "^16.8.1"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "styled-components": "^5.0.1"
+  }
+}
