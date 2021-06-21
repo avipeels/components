@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.4](https://github.com/avipeels/components/compare/@mycomp/turquoise-design-token@0.0.1-alpha.3...@mycomp/turquoise-design-token@0.0.1-alpha.4) (2021-06-21)
+
+**Note:** Version bump only for package @mycomp/turquoise-design-token
+
+
+
+
+
 ## [0.0.1-alpha.3](https://github.com/avipeels/components/compare/@mycomp/turquoise-design-token@0.0.1-alpha.2...@mycomp/turquoise-design-token@0.0.1-alpha.3) (2021-06-21)
 
 **Note:** Version bump only for package @mycomp/turquoise-design-token
