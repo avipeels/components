@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Label = ({name}) => {
+const Label = ({ name, forField }) => {
       return (
-            <div>hello {name}</div>
+            <label for={forField}> {name}</label>
       );
 }
 

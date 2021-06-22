@@ -16,5 +16,6 @@ export const PrimaryTextBox = Template.bind({});
 PrimaryTextBox.args = {
     name: 'Username',
     id: 'username',
-    required: true
+    required: true,
+    placeholder: 'Enter username'
 };

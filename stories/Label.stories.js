@@ -14,5 +14,6 @@ const Template = (args) => <Label {...args} />;
 
 export const PrimaryLabel = Template.bind({});
 PrimaryLabel.args = {
-  name:'Avi'
+  name: 'Label',
+  for: 'Username'
 };
