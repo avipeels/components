@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.13](https://github.com/avipeels/components/compare/@mycomp/label@0.0.2-alpha.12...@mycomp/label@0.0.2-alpha.13) (2021-06-22)
+
+**Note:** Version bump only for package @mycomp/label
+
+
+
+
+
 ## [0.0.2-alpha.12](https://github.com/avipeels/components/compare/@mycomp/label@0.0.2-alpha.11...@mycomp/label@0.0.2-alpha.12) (2021-06-21)
 
 **Note:** Version bump only for package @mycomp/label
