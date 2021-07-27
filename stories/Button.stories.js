@@ -14,5 +14,6 @@ const Template = (args) => <Button {...args} />;
 
 export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
-    name: 'Login'
+    name: 'Login',
+    onClickHandler: () => ({ test = 'abc' }) => console.log(`clicked ${test}`)
 };
