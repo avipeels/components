@@ -1,5 +1,5 @@
 {
-  "name": "@mycomp/button",
+  "name": "@tudi/button",
   "version": "0.1.0-alpha.1",
   "description": "It will generate a button.",
   "main": "dist/index.js",

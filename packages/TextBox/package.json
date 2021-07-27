@@ -1,5 +1,5 @@
 {
-  "name": "@mycomp/textbox",
+  "name": "@tudi/textbox",
   "version": "0.1.0-alpha.1",
   "description": "It will generate a textbox.",
   "main": "dist/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@mycomp/link",
+  "name": "@tudi/link",
   "version": "0.1.0-alpha.2",
   "description": "It will generate a link.",
   "main": "dist/index.js",
